@@ -1,19 +1,40 @@
 import { $ } from './utils';
-alert('test');
+
+const state = {
+  curentMenu: 'manageMenu',
+};
+
+const manageMenuTemplate = () => {
+  return `<h3>상품 추가하기</h3>
+    <div class="product-container">
+        <input type="text" id="product-name-input" placeholder="상품명" />
+        <input type="number" id="product-price-input" placeholder="가격" />
+        <input type="number" id="product-quantity-input" placeholder="수량" />
+        <button id="product-add-button">추가하기</button>
+    </div>
+    <h3>상품 현황</h3>
+    <table class="product-inventory">
+        <colgroup>
+            <col style="width: 140px" />
+            <col style="width: 100px" />
+            <col style="width: 100px" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>상품명</th>
+                <th>가격</th>
+                <th>수량</th>
+            </tr>
+        </thead>
+        <tbody id="product-inventory-container"></tbody>
+    </table>`;
+};
 
 const render = () => {
   window.requestAnimationFrame(() => {
-    console.log('render');
     const app = $('#app');
     const newApp = app.cloneNode(true);
-    newApp.innerHTML = `<div class="purchase-container">
-	<h3>충전하기</h3>
-	<div class="vending-machine-wrapper">
-		<input type="number" name="charge-amount" id="charge-input" />
-		<button id="charge-button">충전하기</button>
-	</div>
-	<p>충전 금액: <span id="charge-amount">0</span>원</p>
-</div>`;
+    newApp.innerHTML = manageMenuTemplate();
     app.replaceWith(newApp);
   });
 };
