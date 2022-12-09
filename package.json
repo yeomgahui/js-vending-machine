@@ -1,0 +1,18 @@
+{
+  "name": "js-vending-machine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yeomgahui/js-vending-machine.git",
+  "author": "= <=ykh4933@naver.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^12.0.2",
+    "eslint": "^8.29.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1"
+  }
+}
