@@ -5,6 +5,9 @@
   "repository": "https://github.com/yeomgahui/js-vending-machine.git",
   "author": "= <=ykh4933@naver.com>",
   "license": "MIT",
+  "scripts": {
+    "cy:open" : "cypress open"
+  },
   "dependencies": {},
   "devDependencies": {
     "cypress": "^12.0.2",
