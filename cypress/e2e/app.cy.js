@@ -23,7 +23,7 @@ describe('자판기 App Application 을 테스트한다.', () => {
 
     it('잔돈 충전 버튼을 클릭하면, 잔돈 충전 페이지가 보인다.', () => {
       cy.get(SELECTOR.PRODUCT_MANAGE_MENU).click();
-      cy.get(SELECTOR.VENDING_MACHING_WRAPPER).should('exist');
+      cy.get(SELECTOR.VENDING_MACHINE_WRAPPER).should('exist');
     });
   });
 });

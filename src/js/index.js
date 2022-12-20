@@ -1,42 +1,9 @@
-import { $ } from './utils';
+import ProductManage from './components/ProductManage';
+import VendingMachineManage from './components/VendingMachineManage';
+import ProductPurchase from './components/ProductPurchase';
+import App from './components/Application';
 
-const state = {
-  curentMenu: 'manageMenu',
-};
-
-const manageMenuTemplate = () => {
-  return `<h3>상품 추가하기</h3>
-    <div class="product-container">
-        <input type="text" id="product-name-input" placeholder="상품명" />
-        <input type="number" id="product-price-input" placeholder="가격" />
-        <input type="number" id="product-quantity-input" placeholder="수량" />
-        <button id="product-add-button">추가하기</button>
-    </div>
-    <h3>상품 현황</h3>
-    <table class="product-inventory">
-        <colgroup>
-            <col style="width: 140px" />
-            <col style="width: 100px" />
-            <col style="width: 100px" />
-        </colgroup>
-        <thead>
-            <tr>
-                <th>상품명</th>
-                <th>가격</th>
-                <th>수량</th>
-            </tr>
-        </thead>
-        <tbody id="product-inventory-container"></tbody>
-    </table>`;
-};
-
-const render = () => {
-  window.requestAnimationFrame(() => {
-    const app = $('#app');
-    const newApp = app.cloneNode(true);
-    newApp.innerHTML = manageMenuTemplate();
-    app.replaceWith(newApp);
-  });
-};
-
-render();
+window.customElements.define('vending-app', App);
+window.customElements.define('product-manage', ProductManage);
+window.customElements.define('vending-machine-manage', VendingMachineManage);
+window.customElements.define('product-purchase', ProductPurchase);
